@@ -1,0 +1,47 @@
+<mat-card class="auth-card">
+  <mat-card-title>Signup</mat-card-title>
+  <mat-card-content>
+    <form
+      fxFlex="100"
+    fxLayout="column" fxLayout.xs="rp" fxLayoutGap="16px"
+
+    [formGroup]="form" (ngSubmit)="submit()">
+
+        <mat-form-field>
+          <input type="text" matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+
+
+
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input type="password" matInput placeholder="Confirm Password" formControlName="password_confirm">
+        </mat-form-field>
+
+
+
+
+      <p *ngIf="cpwd.hasError('invalid')" class="error">
+        Passwords don't match
+      </p>
+
+
+
+      <p *ngIf="error" class="error">
+        {{ error }}
+      </p>
+
+
+        <button mat-raised-button type="submit" color="primary">Sign up</button>
+
+
+      <a routerLink="/signin">Sign in</a>
+
+
+    </form>
+  </mat-card-content>
+</mat-card>

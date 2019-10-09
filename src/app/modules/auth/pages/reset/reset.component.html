@@ -1,0 +1,47 @@
+<mat-card class="auth-card">
+  <mat-card-title>Signin</mat-card-title>
+  <mat-card-content>
+    <form
+      fxFlex="100"
+      [formGroup]="form" (ngSubmit)="submit()"
+      fxLayout="column" fxLayout.xs="rp" fxLayoutGap="16px"
+    >
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+
+
+      <p>
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+      </p>
+
+
+      <p *ngIf="error" class="error">
+        {{ error }}
+      </p>
+
+
+
+
+
+      <button
+        mat-raised-button type="submit"
+        color="primary">
+        Sign in
+      </button>
+
+
+      <p>
+        <a routerLink="/signup">Sign Up</a>
+        or
+        <a routerLink="/signin">Sign in</a>
+      </p>
+
+
+
+    </form>
+  </mat-card-content>
+</mat-card>

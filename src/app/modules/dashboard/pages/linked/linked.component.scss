@@ -1,0 +1,48 @@
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 500px;
+}
+
+th.mat-header-cell {
+  text-align: left;
+  max-width: 300px;
+}
+
+
+
+.block {
+  display: block;;
+
+}
+
+mat-icon {
+  font-size: 2em;
+}
+mat-card-header{
+  background: #12121212;
+  padding: 5px;
+  color:white;
+}
+
+mat-card-content{
+  padding: 10px;
+}
+
+mat-card{
+  padding:0;
+}
+table {
+  width: 100%;
+}
+
+
+  tr {
+    &.mat-header-row {
+      height: auto !important;
+      padding-bottom: 5px !important;
+    }
+  }
+

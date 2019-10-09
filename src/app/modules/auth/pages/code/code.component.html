@@ -1,0 +1,32 @@
+<mat-card class="auth-card">
+  <mat-card-title>Email Verification</mat-card-title>
+  <mat-card-content>
+    <form
+      fxLayout="column" fxLayout.xs="rp" fxLayoutGap="16px"
+
+      [formGroup]="form" (ngSubmit)="submit()">
+
+      <mat-form-field>
+        <input type="text" matInput placeholder="Code" formControlName="code">
+      </mat-form-field>
+
+
+
+
+
+
+
+      <p *ngIf="error" class="error">
+        {{ error }}
+      </p>
+
+
+      <button mat-raised-button type="submit" color="primary">Verify</button>
+
+
+      <a routerLink="/signin">Sign in</a>
+
+
+    </form>
+  </mat-card-content>
+</mat-card>
